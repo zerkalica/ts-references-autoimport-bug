@@ -3,5 +3,8 @@
   "compilerOptions": {
     "outDir": "-",
     "rootDir": "."
-  }
+  },
+  "references": [
+    {"path": "../a"}
+  ]
 }
