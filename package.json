@@ -4,7 +4,7 @@
   "main": "index.js",
   "private": true,
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "typescript": "^4.0.2"
   },
   "workspaces": ["lib/*"]
