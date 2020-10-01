@@ -1,5 +1,5 @@
 {
-  "name": "@some/b",
+  "name": "@some/lib-b",
   "version": "1.0.0",
   "main": "-/b.js",
   "types": "-/b.d.ts",
@@ -7,7 +7,7 @@
     "build": "tsc --build"
   },
   "dependencies": {
-    "@some/a": "^1.0.0",
-    "@some/c": "^1.0.0"
+    "@some/lib-a": "^1.0.0",
+    "@some/lib-c": "^1.0.0"
   }
 }
