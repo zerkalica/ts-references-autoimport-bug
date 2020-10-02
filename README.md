@@ -1,27 +1,9 @@
-# Bug 1. Autocomplete doesn't work if typescript in devDependencies in root package.json.
- 
- Steps to reproduce
- 
-1. clone, yarn install
-1. switch to broken-autoimport-b branch
-2. Open lib/b/b.ts in vscode, type `someC`
-3. Expect to see someC in autocomplete, what i see: no someC in autocomplete
- 
-Autocomplete works if typescript in dependencies
+# Collection of tsserver autoimport bugs
 
-1. Replace devDependencies to dependencies in root package.json
-2. Restart tsserver or vscode
-3. Open lib/b/b.ts in vscode, type `someC`
-4. Expect to see someC in autocomplete, what i see: someC present in autocomplete
+[Broken autoimport of module without index reexport](https://github.com/microsoft/TypeScript/issues/40913) - https://github.com/zerkalica/ts-references-autoimport-bug/tree/no-autoimport-wo-index
 
-# Bug 2. Autocomplete doesn't work via references in tsconfig.json
+[Wrong autoimport presense for dependency not in package.json](https://github.com/microsoft/TypeScript/issues/40911) - https://github.com/zerkalica/ts-references-autoimport-bug/tree/wrong-autoimport-presense
 
-https://github.com/microsoft/TypeScript/issues/39778
+[Autocomplete doesn't work if typescript in devDependencies in monorepos root package.json](https://github.com/microsoft/TypeScript/issues/40869) - https://github.com/zerkalica/ts-references-autoimport-bug/tree/broken-autoimport-b
 
-Steps to reproduce
-
-1. yarn install
-2. Open lib/b/b.ts in vscode, type `someA`
-3. Expect to see someA in autocomplete
-
-Currently autocomplete works only with includes (cpu eating on big projects) and with types in package.json.
+[Auto imports not working with project references](https://github.com/microsoft/TypeScript/issues/39778) - https://github.com/zerkalica/ts-references-autoimport-bug/tree/master

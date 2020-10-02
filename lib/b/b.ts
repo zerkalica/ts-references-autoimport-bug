@@ -1,2 +1,2 @@
-// type someA - autocomplete not working
-// type someC - autocomplete working through "types" in c/package.json
+// type someA in vscode - Expected: autoimport suggests import { someA } from '../a', actual: no autoimport
+
