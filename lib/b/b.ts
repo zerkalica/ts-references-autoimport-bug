@@ -1,2 +1,1 @@
-// type someA - autocomplete not working
-// type someC - autocomplete working through "types" in c/package.json
+// type someC - Expected: autoimport suggest import {someC} from '@some/lib-c', actual: no someC in autoimport
