@@ -1,6 +1,8 @@
 {
   "name": "@some/lib-a",
   "version": "1.0.0",
+  "main": "./-/index.js",
+  "types": "./-/index.d.ts",
   "scripts": {
     "build": "tsc --build"
   }

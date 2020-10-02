@@ -1,2 +1,1 @@
-// type someA - autocomplete not working
-// type someC - autocomplete working through "types" in c/package.json
+// type someA - expected: no autoimport, actual: autoimport present and relative: `import { someA } from '../a'`
