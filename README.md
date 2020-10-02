@@ -6,4 +6,4 @@
 
 [Autocomplete doesn't work if typescript in devDependencies in monorepos root package.json](https://github.com/microsoft/TypeScript/issues/40869) - https://github.com/zerkalica/ts-references-autoimport-bug/tree/broken-autoimport-b
 
-[Auto imports not working with project references](https://github.com/microsoft/TypeScript/issues/39778) - https://github.com/zerkalica/ts-references-autoimport-bug/tree/master
+[Auto imports not working with project references](https://github.com/microsoft/TypeScript/issues/39778) - https://github.com/zerkalica/ts-references-autoimport-bug/tree/autoimport-no-ref
