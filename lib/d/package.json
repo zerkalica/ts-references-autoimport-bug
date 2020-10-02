@@ -1,12 +1,12 @@
 {
-  "name": "@some/lib-b",
+  "name": "@some/lib-d",
   "version": "1.0.0",
-  "main": "-/b.js",
-  "types": "-/b.d.ts",
+  "main": "-/d.js",
+  "types": "-/d.d.ts",
   "scripts": {
     "build": "tsc --build"
   },
   "dependencies": {
-    "@some/lib-a": "^1.0.0"
+    "@some/lib-c": "^1.0.0"
   }
 }

@@ -5,6 +5,6 @@
     "rootDir": "."
   },
   "references": [
-    {"path": "../a"}
+    {"path": "../c"}
   ]
 }

@@ -1,27 +1,23 @@
-# Bug 1. Autocomplete doesn't work if typescript in devDependencies in root package.json.
- 
- Steps to reproduce
- 
-1. clone, yarn install
-1. switch to broken-autoimport-b branch
-2. Open lib/b/b.ts in vscode, type `someC`
-3. Expect to see someC in autocomplete, what i see: no someC in autocomplete
- 
-Autocomplete works if typescript in dependencies
+# Broken autoimport of module without index reexport
 
-1. Replace devDependencies to dependencies in root package.json
-2. Restart tsserver or vscode
-3. Open lib/b/b.ts in vscode, type `someC`
-4. Expect to see someC in autocomplete, what i see: someC present in autocomplete
+https://github.com/microsoft/TypeScript/issues/40913
 
-# Bug 2. Autocomplete doesn't work via references in tsconfig.json
+## Example 1
 
-https://github.com/microsoft/TypeScript/issues/39778
+Package 'b' depends on 'a', but 'a' has no index.ts and types in package.json.
 
 Steps to reproduce
 
-1. yarn install
+1. clone, switch to no-autoimport-wo-index, yarn install
 2. Open lib/b/b.ts in vscode, type `someA`
-3. Expect to see someA in autocomplete
+3. Expected: autoimport suggest `import { someA } from '@some/lib-a/a'`, actual: no autoimport
 
-Currently autocomplete works only with includes (cpu eating on big projects) and with types in package.json.
+## Example 2
+
+Package 'd' depends only on 'c', 'c' depends on 'a', but 'a' has no index.ts and types in package.json.
+
+Steps to reproduce
+
+1. clone, switch to no-autoimport-wo-index, yarn install
+2. Open lib/d/d.ts in vscode, type `someA`
+3. Expected: no someA in autoimport, actual: autoimport suggests broken `import { someA } from '../a/a'`

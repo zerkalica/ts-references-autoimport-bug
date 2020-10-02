@@ -1,9 +1,8 @@
 {
   "name": "@some/lib-c",
   "version": "1.0.0",
-  "main": "./-/index.js",
-  "types": "./-/index.d.ts",
-  "private": true,
+  "main": "-/c.js",
+  "types": "-/c.d.ts",
   "scripts": {
     "build": "tsc --build"
   },
